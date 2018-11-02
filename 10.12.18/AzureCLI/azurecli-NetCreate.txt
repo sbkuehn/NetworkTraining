@@ -1,0 +1,38 @@
+
+# Create a resource group.
+az group create --name ajgazcli --location eastus
+
+
+# Create a virtual network in the same resource group.
+az network vnet create \
+  --name ajgazclivnet \
+  --resource-group ajgazcli \
+  --subnet-name subnet1
+
+# Create a virtual machine
+  az vm create \
+  --resource-group ajgazcli \
+  --name Vm1 \
+  --image UbuntuLTS \
+  --admin-username ajgadmin \
+  --admin-password P@ssw0rd123! \
+  --generate-ssh-keys \
+  --no-wait
+
+# Create another virtual machine
+  az vm create \
+  --resource-group ajgazcli \
+  --name Vm2 \
+  --image UbuntuLTS \
+  --admin-username ajgadmin \
+  --admin-password P@ssw0rd123! \
+  --generate-ssh-keys
+
+# ssh to VM1's PIP
+  ssh ajgadmin@
+
+# Communicate between VMs
+  ping Vm1 -c 4
+
+# Delete resources
+  az group delete --name ajgazcli
