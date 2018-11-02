@@ -1,5 +1,5 @@
 # Introduction 
-Networking on Azure training - prepared for Arthur J. Gallagher - 2018
+Networking on Azure training
 
 # Schedule
 Session Breakdown 08.10.2018
