@@ -13,3 +13,6 @@ Session Breakdown 10.12.2018
 3.	Building a network with the Azure CLI
 1.	Building a network with Azure Resource Manager (ARM) Templates
 
+Session Breakdown 11.16.2018
+1. Filter Network Traffic with NSGs/ASGs
+2. Route Network Traffic with NVA
